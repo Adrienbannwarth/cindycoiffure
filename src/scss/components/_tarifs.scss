@@ -1,0 +1,12 @@
+.c-tarifs {
+  .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+
+    border-top: solid 1px white;
+    color: white;
+  }
+}

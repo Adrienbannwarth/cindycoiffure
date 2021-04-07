@@ -1,0 +1,48 @@
+.nav {
+    position: relative;
+    color: white;
+
+    ul {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+
+            .link {
+                margin: 0 20px;
+                cursor: pointer;
+                position: relative;
+                font-size: 1.1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                // writing-mode:vertical-rl;
+                white-space: nowrap;
+                text-decoration: none;
+            }
+
+            .link::before,
+            .link::after {
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: white;
+                top: 100%;
+                left: 0;
+                pointer-events: none;
+            }
+
+            .link::before {
+                content: '';
+                transform-origin: 100% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s;
+            }
+
+            .link:hover::before {
+                transform-origin: 0% 50%;
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
+}

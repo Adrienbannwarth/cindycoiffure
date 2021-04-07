@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─
+/*─                                                                                      RESET
+/*─
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+* {
+  box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: none;
+  /*─ Debug font size on iphone when landscape orientation ─*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*─ Debug safari font weight when fixed element on the page ─*/
+  -webkit-font-smoothing: antialiased;
+  /*─ idem : Debug safari font weight when fixed element on the page ─*/ }
+
+html, body, nav, header, footer, div, span,
+h1, h2, h3, p,
+a, img,
+ul, li,
+table, form, label, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%; }
+
+ul {
+  list-style: none; }
+
+li {
+  list-style: none; }
+
+input, textarea, select, button {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit; }
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+input[type='submit']:hover,
+button:hover {
+  cursor: pointer; }
+
+input::-ms-clear {
+  display: none;
+  /*─ IE11 → remove cross to close ─*/ }
+
+textarea {
+  overflow: auto;
+  /*─ Hide scroll bar on IE ─*/ }
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none; }
+
+img, video, svg, picture {
+  display: block; }
+
+img, video {
+  width: 100%;
+  height: auto; }
+
+svg {
+  width: 100%;
+  height: 100%; }
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: #7B877E;
+  overflow-x: hidden; }
+
+.container {
+  padding: 32px;
+  max-width: 1440px;
+  width: 100%; }
+
+.content {
+  margin-top: 30vh; }
+
+.h1 {
+  font-size: 9vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+  white-space: pre;
+  line-height: 8vw; }
+
+.h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white; }
+
+.content-img {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 30px; }
+  .content-img--center {
+    justify-content: center; }
+  .content-img--left {
+    justify-content: flex-start; }
+  .content-img--right {
+    justify-content: flex-end; }
+  .content-img .img--xs {
+    width: 20%; }
+  .content-img .img--sm {
+    width: 30%; }
+  .content-img .img--md {
+    width: 50%; }
+  .content-img .img--lg {
+    width: 70%; }
+  .content-img .img--xl {
+    width: 100%; }
+  .content-img .img.front {
+    z-index: 3; }
+  .content-img .img.back {
+    z-index: 1; }
+
+@media (max-width: 750px) {
+  .container {
+    padding: 0 24px; } }
+
+.nav {
+  position: relative;
+  color: white; }
+  .nav ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; }
+    .nav ul li .link {
+      margin: 0 20px;
+      cursor: pointer;
+      position: relative;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-decoration: none; }
+    .nav ul li .link::before,
+    .nav ul li .link::after {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      pointer-events: none; }
+    .nav ul li .link::before {
+      content: '';
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s; }
+    .nav ul li .link:hover::before {
+      transform-origin: 0% 50%;
+      transform: scale3d(1, 1, 1); }
+
+.c-footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 200px; }
+  .c-footer .col {
+    width: 60%;
+    height: 100%;
+    background-color: white; }
+
+.c-tarifs .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  border-top: solid 1px white;
+  color: white; }
