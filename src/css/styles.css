@@ -139,9 +139,8 @@ body {
   .content-img .img.back {
     z-index: 1; }
 
-@media (max-width: 750px) {
-  .container {
-    padding: 0 24px; } }
+.u-center {
+  text-align: center; }
 
 .nav {
   position: relative;
@@ -188,11 +187,29 @@ body {
     height: 100%;
     background-color: white; }
 
-.c-tarifs .line {
+.row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 0;
-  border-top: solid 1px white;
-  color: white; }
+  justify-content: space-around; }
+  @media (max-width: 750px) {
+    .row {
+      flex-direction: column; } }
+
+.c-tarifs {
+  width: 40%; }
+  @media (max-width: 750px) {
+    .c-tarifs {
+      width: 100%; } }
+  .c-tarifs .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    border-top: solid 1px white;
+    color: white; }
+    @media (max-width: 750px) {
+      .c-tarifs .line {
+        padding: 0; } }
+    .c-tarifs .line h4 {
+      font-weight: 400;
+      letter-spacing: 0.02rem; }
