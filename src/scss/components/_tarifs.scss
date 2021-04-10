@@ -9,7 +9,12 @@
 }
 
 .c-tarifs {
+  margin-top: 30px;
   width: 40%;
+
+  h2 {
+    margin-bottom: 30px;
+  }
 
 
   @media (max-width: 750px) {
@@ -23,7 +28,7 @@
     width: 100%;
     padding: 8px 0;
 
-    border-top: solid 1px white;
+    border-top: solid 1px rgba(255, 255, 255, 0.43);
     color: white;
 
     @media (max-width: 750px) {
