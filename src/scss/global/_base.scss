@@ -5,7 +5,8 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background: #7B877E;
+  // background: #7B877E;
+  background: white;
   overflow-x: hidden;
 }
 
@@ -25,6 +26,10 @@ body {
   }
 }
 
+.content-partners>img {
+  width: 150px;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -36,7 +41,7 @@ body {
   text-transform: uppercase;
 
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  -webkit-text-stroke-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(3, 3, 3);
   -webkit-text-stroke-width: 2px;
   white-space: pre;
   line-height: 8vw;
@@ -50,7 +55,7 @@ body {
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 700;
-  color: white;
+  color: black;
 }
 
 .h3 {
@@ -61,7 +66,7 @@ body {
 .desc {
   margin-top: 30vh;
   margin-bottom: 100px;
-  color: white;
+  color: black;
   line-height: 1.5rem;
 
   @media (max-width: 750px) {
@@ -71,12 +76,15 @@ body {
 
 .header-img {
   z-index: -1;
-  top: 0;
-  right: 0;
   position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateX(-50%);
+
   width: 30%;
 
   @media (max-width: 750px) {
+    left: 50%;
     width: 75%;
   }
 }

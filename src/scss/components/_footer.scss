@@ -11,13 +11,14 @@
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: white;
+    background-color: black;
 
     @media (max-width: 750px) {
       width: 100%;
     }
 
     p {
+      color: white;
       font-style: italic;
 
       @media (max-width: 750px) {
