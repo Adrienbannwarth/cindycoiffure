@@ -191,6 +191,9 @@ body {
 .u-marg {
   margin-top: 50px; }
 
+.color {
+  color: #ee9f9f; }
+
 .nav {
   position: relative;
   color: black; }
